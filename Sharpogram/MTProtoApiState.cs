@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 
 using Telegram.API;
+using Telegram.MTProto;
 
-namespace Telegram.MTProto
+namespace Sharpogram
 {
     class MTProtoApiState : AbsMTProtoState {
         private KnownSalt[] knownSalts = new KnownSalt[0];

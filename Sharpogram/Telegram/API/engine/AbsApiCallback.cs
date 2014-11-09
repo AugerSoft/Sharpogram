@@ -3,12 +3,12 @@ using System.Text;
 
 namespace Telegram.API
 {
-    public interface AbsApiCallback
+    public abstract class AbsApiCallback
     {
-        public void onAuthCancelled(TelegramApi api);
+        public abstract void onAuthCancelled(TelegramApi api);
 
-        public void onUpdatesInvalidated(TelegramApi api);
+        public abstract void onUpdatesInvalidated(TelegramApi api);
 
-        public void onUpdate(TLAbsUpdates updates);
+        public abstract void onUpdate(TLAbsUpdates updates);
     }
 }

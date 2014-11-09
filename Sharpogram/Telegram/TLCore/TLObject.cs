@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Ionic.Crc;
 using System.Runtime.Serialization;
+using Telegram.MTProto;
 
 namespace Telegram.TLCore
 {
@@ -19,7 +20,7 @@ namespace Telegram.TLCore
      *
      * Based on (@author Korshakov Stepan <me@ex3ndr.com> for Java)
      */
-    public abstract class TLObject : List<TLObject>/*, CRC32*/ {
+    public abstract class TLObject : List<TLObject>/*, Crc32*/ {
 
         /**
          * Getting TL Class identification
@@ -108,9 +109,12 @@ namespace Telegram.TLCore
          * @param context tl context
          * @throws IOException
          */
-//        public void deserializeBody(/*InputStream*/BufferedStream stream, TLContext context) {
-//            CRC32 crc32 = new CRC32();
-//        }
+        /*
+        public void deserializeBody(BufferedStream stream, TLContext context)
+        {
+            Crc32 crc32 = new Crc32();
+        }
+        */
         public abstract void deserializeBody(BufferedStream stream, TLContext context);
     }
 }

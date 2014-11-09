@@ -17,10 +17,10 @@ namespace Telegram.TLCore
         /*
         public T deserializeResponse(byte[] data, TLContext context) {
             
-            return deserializeResponse(new MemoryStream(data), context);
+            return deserializeResponse(new BufferedStream(data), context);
         }
         
-        public abstract T deserializeResponse(MemoryStream stream, TLContext context);
+        public abstract T deserializeResponse(BufferedStream stream, TLContext context);
         */
     }
 }
