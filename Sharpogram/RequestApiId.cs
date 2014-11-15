@@ -40,7 +40,7 @@ Slv8kg9qv1m6XHVQY3PnEw+QQtqSIXklHwIDAQAB
         {
             TLContext tlContext = new TLApiContext();
             TcpClient tcpClient = new TcpClient();
-            tcpClient.ConnectAsync(connections[0].getAddress(), (int)connections[0].getPort());
+            tcpClient.Connect(connections[0].getAddress(), (int)connections[0].getPort());
             TLRequestAuthSendCode tlRequestAuthSendCode = new  TLRequestAuthSendCode("+79241652563", 
                                                     0, 19114, "1e489fd15dcff313e5b3e7a08e8fc791", "en");
 
